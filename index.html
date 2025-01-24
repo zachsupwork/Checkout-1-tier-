@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stripe Pricing Table</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #iframe-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="iframe-container">
+    <iframe srcdoc='
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stripe Pricing Table</title>
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+      </head>
+      <body>
+        <stripe-pricing-table 
+          pricing-table-id="prctbl_1QkY6bByONQ6hwN89xJkJsbt"
+          publishable-key="pk_live_51Lcuo7ByONQ6hwN8xWkiyoHTnvxSKDRmezcR5dTlgiunzEwfW4Ww3Y7i3hgpdAKDZLB8dKDAgjt89MpfzW8aiaWf00aAQ9JJuv">
+        </stripe-pricing-table>
+      </body>
+      </html>'>
+    </iframe>
+  </div>
+</body>
+</html>
