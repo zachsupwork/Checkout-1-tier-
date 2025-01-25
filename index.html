@@ -1,169 +1,47 @@
----
-import Layout from '~/layouts/PageLayout.astro';
-
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
-const metadata = {
-  title: 'AI Voice Assistant — Your Partner in Productivity and Communication',
-  ignoreTitleTemplate: true,
-};
----
-
-<Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get Started',
-        href: 'https://checkout-1-tier.vercel.app/',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn More', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AI Voice Assistant Hero Image' }}
-  >
-    <Fragment slot="title">
-      Revolutionize Communication with <span class="text-accent dark:text-white highlight">AI Voice Assistance</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Experience the power of intelligent voice interaction. Transform the way you manage tasks, streamline communication, and boost productivity.</span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AI-Powered Efficiency Redefined.</span>
-    </Fragment>
-  </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <Note />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Key Features"
-    title="What Makes Our AI Voice Assistant Stand Out"
-    subtitle="An innovative blend of advanced AI capabilities to make life easier and work smarter."
-    items={[
-      {
-        title: 'Natural Language Understanding',
-        description:
-          'Seamlessly understand and respond to conversational inputs, making communication natural and intuitive.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Personalized Assistance',
-        description:
-          'Tailored responses and recommendations based on your preferences and behavior.',
-        icon: 'tabler:user',
-      },
-      {
-        title: 'Multi-Language Support',
-        description:
-          'Communicate effortlessly in multiple languages with our global-ready voice assistant.',
-        icon: 'tabler:language',
-      },
-      {
-        title: 'Task Automation',
-        description:
-          'Automate repetitive tasks like scheduling, reminders, and note-taking to save time.',
-        icon: 'tabler:checklist',
-      },
-      {
-        title: 'Smart Integration',
-        description:
-          'Integrates with your favorite tools and platforms like calendars, email, and smart devices.',
-        icon: 'tabler:device-desktop',
-      },
-      {
-        title: 'Privacy First',
-        description:
-          'Your data is safe with us. Our AI prioritizes security and confidentiality.',
-        icon: 'tabler:lock',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    tagline="Inside the Assistant"
-    title="Explore the Capabilities"
-    items={[
-      {
-        title: 'Voice Recognition',
-        description:
-          'Leverages cutting-edge technology to understand voice commands accurately in real-time.',
-      },
-      {
-        title: 'Seamless Integration',
-        description:
-          'Sync with your apps and devices to create a unified experience for work and life.',
-      },
-      {
-        title: 'Real-Time Updates',
-        description:
-          'Get instant responses and updates for your tasks, calendar, and notifications.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1606761563446-68ab4253ad52?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80',
-      alt: 'AI Voice Assistant in Action',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Your Partner in Productivity</h3>
-      Simplify your tasks and elevate your communication.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Users', amount: '500K+' },
-      { title: 'Tasks Automated', amount: '10M+' },
-      { title: 'Languages Supported', amount: '20+' },
-      { title: 'Smart Integrations', amount: '50+' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get Started',
-        href: 'https://checkout-1-tier.vercel.app/',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Experience the Future of <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">AI Voice Assistance</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Transform your life and work with the power of intelligent voice interactions. <br class="hidden md:inline" />Get started today!
-    </Fragment>
-  </CallToAction>
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stripe Pricing Table</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #iframe-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="iframe-container">
+    <iframe srcdoc='
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stripe Pricing Table</title>
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+      </head>
+      <body>
+        <stripe-pricing-table 
+          pricing-table-id="prctbl_1QkY6bByONQ6hwN89xJkJsbt"
+          publishable-key="pk_live_51Lcuo7ByONQ6hwN8xWkiyoHTnvxSKDRmezcR5dTlgiunzEwfW4Ww3Y7i3hgpdAKDZLB8dKDAgjt89MpfzW8aiaWf00aAQ9JJuv">
+        </stripe-pricing-table>
+      </body>
+      </html>'>
+    </iframe>
+  </div>
+</body>
+</html>
